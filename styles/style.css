@@ -82,7 +82,8 @@ body {
   padding: 36px 62px;
 }
 .brand-img {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
   justify-content: center;
   gap: 60px;
   width: 100%;
@@ -206,4 +207,46 @@ body {
   color: #ffffff;
   justify-content: center;
   align-items: center;
+}
+
+.hide{
+    display: none;
+}
+/* responsive part */
+@media screen and (max-width:576px) {
+    .banner{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .banner-text-container{
+        width: 570px;
+        margin: 70px 0;
+        text-align: center;
+        margin-left: 25%;
+    }
+    .banner img{
+        margin-left: 30%;
+        
+    }
+    .brand-img{
+     grid-template-columns: repeat(4,1fr);
+     padding-left: 65%;
+
+    }
+   .container{
+    margin-top: 29%;
+   }
+    
+    .popular-collection{
+        grid-template-columns: repeat(1, 1fr);
+        width: 329px;
+    }
+    .last-container{
+        flex-direction: column;
+        margin: 0 50%;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    
 }
